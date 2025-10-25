@@ -116,14 +116,25 @@ const pvr3Schema = new mongoose.Schema({
     remarksFactors: String,
 
     selectedPropertyType:String,
+
+    progressWorkItems:[
+        {
+            description:String,
+            applicantEstimate:String,
+            valuerOpinion:String,
+        }
+    ],
+
+    floors:[{
+        name:String,
+        area:String,
+        marketRate:String,
+        guidelineRate:String,
+    }],
     
     // Images (if needed)
     images: [{
         fileName: {
-        type: String,
-        required: true
-    },
-    filePath: {
         type: String,
         required: true
     },
